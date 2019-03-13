@@ -3,7 +3,11 @@ pool:
 
 steps:
   - task: gittools.gitversion.gitversion-task.GitVersion@4
-  
+
+  - task: NuGetToolInstaller@0
+    inputs:
+      versionSpec: 4.9.1
+
   - task: NuGetCommand@2
     inputs:
       restoreSolution: MarketingCloud/MarketingCloud.sln'
