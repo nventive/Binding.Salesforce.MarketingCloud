@@ -10,7 +10,8 @@ steps:
 
   - task: NuGetCommand@2
     inputs:
-      restoreSolution: MarketingCloud/MarketingCloud.sln'
+      command: restore
+      restoreSolution: MarketingCloud/MarketingCloud.sln
 
   - task: MSBuild@1
     inputs:
