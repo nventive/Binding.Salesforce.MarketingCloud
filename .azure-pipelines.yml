@@ -1,0 +1,22 @@
+pool:
+  name: 'Hosted VS 2017'
+
+steps:
+  - task: gittools.gitversion.gitversion-task.GitVersion@4
+  
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: MarketingCloud/MarketingCloud.sln'
+
+  - task: MSBuild@1
+    inputs:
+      solution: MarketingCloud/MarketingCloud.sln
+      msbuildArguments: '"/p:PackageOutputPath=$(build.artifactstagingdirectory)" /p:PackageVersion=$(GitVersion.SemVer) /p:InformationalVersion=$(GitVersion.InformationalVersion)'
+      platform: 'Any CPU'
+      configuration: Release
+
+  - task: PublishBuildArtifacts@1
+    condition: succeededOrFailed()
+    inputs:
+      PathtoPublish: '$(build.artifactstagingdirectory)'
+      ArtifactName: Packages
