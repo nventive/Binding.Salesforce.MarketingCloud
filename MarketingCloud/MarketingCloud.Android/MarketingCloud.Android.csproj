@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+	<PropertyGroup>
+		<TargetFramework>MonoAndroid80</TargetFramework>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>nventive</Authors>
+		<Description>An Android binding over SalesForce.MarketingCloud Journey For App Builder SDK 6.1.0</Description>
+		<PackageId>Uno.Binding.SalesForce.MarketingCloud.Android</PackageId>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'MonoAndroid80'">
+		<TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
+		<TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+		<AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+		<DebugType>full</DebugType>
+		<DefineConstants>$(DefineConstants);MONOANDROID8_0</DefineConstants>
+		<LanguageTargets>$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets</LanguageTargets>
+		<AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
+		<JavaOptions>$(JavaOptions) -noverify </JavaOptions>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(TargetFrameworkIdentifier)' == 'MonoAndroid' ">
+		<Reference Include="Mono.Android" />
+		<Reference Include="System" />
+		<Reference Include="System.Collections" />
+		<Reference Include="System.Threading.Tasks" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Runtime" />
+		<Reference Include="System.Json" />
+		<Reference Include="System.Threading.Tasks" />
+		<Reference Include="System.IdentityModel" />
+		<Reference Include="System.Net.Http" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Runtime.Serialization" />
+		<Reference Include="System.Xml" />
+		<Compile Include="Platforms\monoandroid80\**\*.cs" />
+		<AndroidResource Include="Resources\**\*.xml" />
+	</ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="Jars\marketingcloudsdk-6.1.0.aar" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AndroidAltBeaconLibrary" Version="2.10.0.31004-pre2">
+      <NoWarn>NU1202</NoWarn>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="70.1501.0-preview2" />
+	<PackageReference Include="Xamarin.Android.Support.Compat">
+		<Version>26.1.0.1</Version>
+	</PackageReference>
+	<PackageReference Include="Xamarin.Android.Support.Core.Utils">
+		<Version>26.1.0.1</Version>
+	</PackageReference>
+	<PackageReference Include="Xamarin.Android.Support.v4">
+		<Version>26.1.0.1</Version>
+	</PackageReference>
+	<PackageReference Include="Xamarin.Firebase.Messaging">
+	  <Version>70.1710.0-preview2</Version>
+	</PackageReference>
+	<PackageReference Include="Xamarin.Build.Download">
+	  <Version>0.4.11</Version>
+	</PackageReference>
+  </ItemGroup>
+</Project>

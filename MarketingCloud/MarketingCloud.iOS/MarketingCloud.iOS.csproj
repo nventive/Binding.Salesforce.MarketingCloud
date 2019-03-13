@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+	<PropertyGroup>
+		<TargetFramework>Xamarin.iOS10</TargetFramework>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>nventive</Authors>
+		<Description>An iOS binding over SalesForce.MarketingCloud Journey For App Builder SDK 4.9.5.209</Description>
+		<PackageId>Uno.Binding.SalesForce.MarketingCloud.iOS</PackageId>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'Xamarin.iOS10'">
+		<TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+		<TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+		<NuGetTargetMoniker>Xamarin.iOS,Version=v1.0</NuGetTargetMoniker>
+		<IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+		<DefineConstants>$(DefineConstants);IOS1_0;XAMARIN;XAMARIN_IOS;XAMARIN_IOS_UNIFIED</DefineConstants>
+		<DebugType>full</DebugType>
+		<LanguageTargets>$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets</LanguageTargets>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">
+		<Reference Include="System" />
+		<Reference Include="System.Runtime" />
+		<Reference Include="System.Collections" />
+		<Reference Include="System.Threading.Tasks" />
+		<Reference Include="System.IdentityModel" />
+		<Reference Include="System.Net.Http" />
+		<Reference Include="System.Json" />
+		<Reference Include="System.Runtime.Serialization" />
+		<Reference Include="Xamarin.iOS" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="ApiDefinition.cs" />
+		<Compile Remove="Structs.cs" />
+	</ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="Source\libJB4ASDK-4.9.5.20900000.a" />
+  </ItemGroup>
+</Project>
