@@ -1,5 +1,5 @@
 pool:
-  name: 'Hosted VS2017'
+  name: 'Hosted macOS'
 
 steps:
   - task: gittools.gitversion.gitversion-task.GitVersion@4
@@ -11,7 +11,7 @@ steps:
   - task: NuGetCommand@2
     inputs:
       command: restore
-      restoreSolution: MarketingCloud/MarketingCloud.sln
+      restoreSolution: MarketingCloud/MarketingCloud.sln'
 
   - task: MSBuild@1
     inputs:
