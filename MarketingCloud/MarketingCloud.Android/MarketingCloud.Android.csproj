@@ -6,6 +6,7 @@
 		<Description>An Android binding over SalesForce.MarketingCloud Journey For App Builder SDK 6.1.0</Description>
 		<PackageId>Uno.Binding.SalesForce.MarketingCloud.Android</PackageId>
 		<OutputPath>bin/$(Configuration)/$(TargetFramework)</OutputPath>
+		<DesignTimeBuild Condition="'$(GeneratePackageOnBuild)'=='true'">false</DesignTimeBuild>
 	</PropertyGroup>
 	<PropertyGroup>
 		<TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
