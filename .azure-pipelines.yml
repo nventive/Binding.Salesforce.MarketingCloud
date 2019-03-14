@@ -19,7 +19,8 @@ steps:
   - task: NuGetCommand@2
     inputs:
       command: restore
-      restoreSolution: MarketingCloud/MarketingCloud.sln'
+      restoreSolution: MarketingCloud/MarketingCloud.sln
+      includeNuGetOrg: true
 
   - task: MSBuild@1
     inputs:
