@@ -5,6 +5,7 @@
 		<Authors>nventive</Authors>
 		<Description>An iOS binding over SalesForce.MarketingCloud Journey For App Builder SDK 4.9.5.209</Description>
 		<PackageId>Uno.Binding.SalesForce.MarketingCloud.iOS</PackageId>
+		<OutputPath>bin/$(Configuration)/$(TargetFramework)</OutputPath>
 	</PropertyGroup>
 	<PropertyGroup>
 		<TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
