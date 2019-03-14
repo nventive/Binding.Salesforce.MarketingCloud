@@ -6,13 +6,12 @@
 		<Description>An Android binding over SalesForce.MarketingCloud Journey For App Builder SDK 6.1.0</Description>
 		<PackageId>Uno.Binding.SalesForce.MarketingCloud.Android</PackageId>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(TargetFramework)' == 'MonoAndroid80'">
+	<PropertyGroup>
 		<TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
 		<TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
 		<AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
 		<DebugType>full</DebugType>
 		<DefineConstants>$(DefineConstants);MONOANDROID8_0</DefineConstants>
-		<LanguageTargets>$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets</LanguageTargets>
 		<AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
 		<JavaOptions>$(JavaOptions) -noverify </JavaOptions>
 	</PropertyGroup>
@@ -66,4 +65,5 @@
 	  <Version>0.4.11</Version>
 	</PackageReference>
   </ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
