@@ -6,6 +6,7 @@
 		<Description>An iOS binding over SalesForce.MarketingCloudSDK v6.1.4</Description>
 		<PackageId>Uno.Binding.SalesForce.MarketingCloud.iOS</PackageId>
 		<OutputPath>bin/$(Configuration)/$(TargetFramework)</OutputPath>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	</PropertyGroup>
   <PropertyGroup>
     <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
