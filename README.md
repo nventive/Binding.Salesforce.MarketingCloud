@@ -2,15 +2,15 @@
 
 ## Summary
 
-The following bindings are for the **Journey Builder For Apps (JB4A) SDK** from **SalesForce.MarketingCloud**.
+Bindings are for **SalesForce.MarketingCloud**.
 
 ## Android
 
-The library documentation is located [here](http://salesforce-marketingcloud.github.io/JB4A-SDK-Android-DocPreview/).
+The library documentation is located [here](https://salesforce-marketingcloud.github.io/JB4A-SDK-Android/).
 
-This binding is for the SDK version **5.0.6** released _August 4, 2017_.
+This binding is for the SDK version **6.1.0**.
 
-The source `.aar` file is located in [Marketing Cloud's Maven repository](http://salesforce-marketingcloud.github.io/JB4A-SDK-Android/repository/com/salesforce/marketingcloud/marketingcloudsdk/).
+The source `.aar` file is located in [MarketingCloud's Maven repository](http://salesforce-marketingcloud.github.io/JB4A-SDK-Android/repository/com/salesforce/marketingcloud/marketingcloudsdk/).
 
 ### Note
 
@@ -27,13 +27,11 @@ _2017-10-15: After integrating the **5.1.3** package in a project, we discovered
 
 ## iOS
 
-The library documentation is located [here](http://salesforce-marketingcloud.github.io/JB4A-SDK-iOS-DocPreview/) for iOS.
+The library documentation is located [here](https://salesforce-marketingcloud.github.io/MarketingCloudSDK-iOS) for iOS.
 
-This binding is for the SDK version **4.9.5.209** released _August 28, 2017_.
+This binding is for the SDK version **6.1.4**.
 
-The source files are located in [Marketing Cloud's GitHub repository](https://github.com/salesforce-marketingcloud/JB4A-SDK-iOS).
-
-Along with the `.a` file, the `.h` files are also available in this project as a reference under the `Source` folder.
+The source files are located in [MarketingCloud's GitHub repository](https://github.com/salesforce-marketingcloud/MarketingCloudSDK-iOS).
 
 ### **How to use**
 
