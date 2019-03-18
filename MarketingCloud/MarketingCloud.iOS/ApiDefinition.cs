@@ -516,7 +516,7 @@ namespace MarketingCloud
         // -(NSDictionary * _Nullable)sfmc_build;
         [NullAllowed, Export("sfmc_build")]
         //[Verify (MethodToProperty)]
-        NSDictionary Sfmc_build { get; }
+        NSDictionary Sfmc_build();
 
         // -(instancetype _Nonnull)sfmc_setApplicationId:(NSString * _Nonnull)setApplicationId;
         [Export("sfmc_setApplicationId:")]
