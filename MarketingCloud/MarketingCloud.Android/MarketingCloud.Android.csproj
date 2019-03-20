@@ -47,26 +47,5 @@
   <ItemGroup>
     <LibraryProjectZip Include="Jars\marketingcloudsdk-6.1.0.aar" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="AndroidAltBeaconLibrary" Version="2.10.0.31004-pre2">
-      <NoWarn>NU1202</NoWarn>
-    </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="70.1501.0-preview2" />
-	<PackageReference Include="Xamarin.Android.Support.Compat">
-		<Version>26.1.0.1</Version>
-	</PackageReference>
-	<PackageReference Include="Xamarin.Android.Support.Core.Utils">
-		<Version>26.1.0.1</Version>
-	</PackageReference>
-	<PackageReference Include="Xamarin.Android.Support.v4">
-		<Version>26.1.0.1</Version>
-	</PackageReference>
-	<PackageReference Include="Xamarin.Firebase.Messaging">
-	  <Version>70.1710.0-preview2</Version>
-	</PackageReference>
-	<PackageReference Include="Xamarin.Build.Download">
-	  <Version>0.4.11</Version>
-	</PackageReference>
-  </ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
