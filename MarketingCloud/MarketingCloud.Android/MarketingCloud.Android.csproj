@@ -1,51 +1,33 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
-	<PropertyGroup>
-		<TargetFramework>MonoAndroid80</TargetFramework>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Authors>nventive</Authors>
-		<Description>An Android binding over SalesForce.MarketingCloud Journey For App Builder SDK 6.1.0</Description>
-		<PackageId>Uno.Binding.SalesForce.MarketingCloud.Android</PackageId>
-		<OutputPath>bin/$(Configuration)/$(TargetFramework)</OutputPath>
-		<DesignTimeBuild Condition="'$(GeneratePackageOnBuild)'=='true'">false</DesignTimeBuild>
-		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-	</PropertyGroup>
-	<PropertyGroup>
-		<TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
-		<TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
-		<AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-		<DebugType>full</DebugType>
-		<DefineConstants>$(DefineConstants);MONOANDROID8_0</DefineConstants>
-		<AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
-		<JavaOptions>$(JavaOptions) -noverify </JavaOptions>
-	</PropertyGroup>
-	<ItemGroup Condition="'$(TargetFrameworkIdentifier)' == 'MonoAndroid' ">
-		<Reference Include="Mono.Android" />
-		<Reference Include="System" />
-		<Reference Include="System.Collections" />
-		<Reference Include="System.Threading.Tasks" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Runtime" />
-		<Reference Include="System.Json" />
-		<Reference Include="System.Threading.Tasks" />
-		<Reference Include="System.IdentityModel" />
-		<Reference Include="System.Net.Http" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Runtime.Serialization" />
-		<Reference Include="System.Xml" />
-		<Compile Include="Platforms\monoandroid80\**\*.cs" />
-		<AndroidResource Include="Resources\**\*.xml" />
-	</ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>MonoAndroid80</TargetFramework>
+    <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>Uno.Binding.SalesForce.MarketingCloud.Android</PackageId>
+    <Description>An Android binding over SalesForce.MarketingCloud Journey For App Builder SDK 6.1.0</Description>
+    <Authors>nventive</Authors>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageIconUrl>https://nv-assets.azurewebsites.net/logos/nv_small_square_logo.jpg</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/nventive/Binding.Salesforce.MarketingCloud</PackageProjectUrl>
+
+    <OutputPath>bin/$(Configuration)/$(TargetFramework)</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GeneratedOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(TargetFramework)\generated\</GeneratedOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
+    <DesignTimeBuild Condition="'$(GeneratePackageOnBuild)'=='true'">false</DesignTimeBuild>
+  </PropertyGroup>
+
   <ItemGroup>
+    <Reference Include="Mono.Android" />
+
     <TransformFile Include="Transforms\Metadata.xml" />
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Additions\" />
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
+
     <LibraryProjectZip Include="Jars\marketingcloudsdk-6.1.0.aar" />
   </ItemGroup>
-	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
