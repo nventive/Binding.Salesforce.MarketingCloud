@@ -17,6 +17,7 @@
 		<DefineConstants>$(DefineConstants);MONOANDROID8_0</DefineConstants>
 		<AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
 		<JavaOptions>$(JavaOptions) -noverify </JavaOptions>
+    <AndroidClassParser>class-parse</AndroidClassParser>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFrameworkIdentifier)' == 'MonoAndroid' ">
 		<Reference Include="Mono.Android" />
