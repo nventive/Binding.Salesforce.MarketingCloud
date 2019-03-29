@@ -17,6 +17,7 @@
     <GeneratedOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(TargetFramework)\generated\</GeneratedOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
     <DesignTimeBuild Condition="'$(GeneratePackageOnBuild)'=='true'">false</DesignTimeBuild>
+    <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>
 
   <ItemGroup>
