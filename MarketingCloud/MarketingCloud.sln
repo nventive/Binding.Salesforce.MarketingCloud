@@ -10,17 +10,37 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
 		Release|Any CPU = Release|Any CPU
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{55C7118A-71A0-471B-BF67-A41C697188FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55C7118A-71A0-471B-BF67-A41C697188FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{55C7118A-71A0-471B-BF67-A41C697188FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55C7118A-71A0-471B-BF67-A41C697188FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Release|iPhone.Build.0 = Release|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{55C7118A-71A0-471B-BF67-A41C697188FA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Release|iPhone.Build.0 = Release|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{15229BCC-FF56-4AD7-913B-222E378F90F4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

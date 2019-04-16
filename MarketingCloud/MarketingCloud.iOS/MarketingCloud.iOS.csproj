@@ -1,6 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
-  <PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+	<PropertyGroup>
 		<TargetFramework>xamarinios10</TargetFramework>
 		<TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
 		<TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
@@ -11,21 +10,18 @@
 		<PackageId>Uno.Binding.SalesForce.MarketingCloud.iOS</PackageId>
 		<OutputPath>bin/$(Configuration)/$(TargetFramework)</OutputPath>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <RootNamespace>Salesforce.MarketingCloud</RootNamespace>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+		<RootNamespace>Salesforce.MarketingCloud</RootNamespace>
+		<IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
 		<DefineConstants>$(DefineConstants);IOS1_0;XAMARIN;XAMARIN_IOS;XAMARIN_IOS_UNIFIED</DefineConstants>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="MarketingCloudSDK.framework\Info.plist" />
-  </ItemGroup>
-  <ItemGroup>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="Xamarin.iOS" />
+	</ItemGroup>
+	<ItemGroup>
 		<!-- Prevents MSBuild from directly building the files-->
 		<Compile Remove="Structs.cs;ApiDefinition.cs" />
 		<!-- Includes the files in VS -->
@@ -38,6 +34,11 @@
 		<!-- Includes the SDK in VS-->
 		<None Include="MarketingCloudSDK.framework/**/*" />
 
+		<!-- Includes the Resources bundle -->
+		<BundleResource Include="Resources\MarketingCloudSDK.bundle\**\*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</BundleResource>
+
 		<!-- Binding instructions for the SDK-->
 		<NativeReference Include="MarketingCloudSDK.framework">
 			<Kind>Framework</Kind>
@@ -45,9 +46,9 @@
 			<Frameworks>Foundation UIKit CoreTelephony</Frameworks>
 			<LinkerFlags>-ObjC</LinkerFlags>
 		</NativeReference>
-  </ItemGroup>
+	</ItemGroup>
 
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+	<Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 
 	<!-- Copied from C:\Program Files (x86)\Microsoft Visual Studio\Preview\Professional\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets -->
 	<!-- Modified to prevent NuGet to attempt to look for the native manifest -->
