@@ -2,7 +2,7 @@
 
 ## Summary
 
-Bindings are for **SalesForce.MarketingCloud**.
+Bindings are for **SalesForce.MarketingCloud**. 
 
 ## Android
 
